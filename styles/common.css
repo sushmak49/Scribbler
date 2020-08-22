@@ -1,0 +1,31 @@
+.header{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+
+.title{
+    color:blue;
+    font-family: 'Montez', cursive; 
+    font-size: 40px;   
+    margin: 0px;
+}
+
+.sub-heading{
+    font-family: 'Ubuntu Mono', monospace;
+    margin-top: 1px;
+}
+
+.signIn-button-container{
+    padding: 5px;
+}
+
+.btn-signIn{
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border: none;
+    margin: 7px;
+    padding: 10px 20px;
+    font-size: 15px;    
+}
