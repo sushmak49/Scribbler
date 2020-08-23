@@ -6,7 +6,8 @@
     <!-- TODO: Include Google Fonts file here -->
     <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="./styles/index.css"/>
     <link rel="stylesheet" type="text/css" href="./styles/common.css"/>
 
@@ -20,15 +21,60 @@
             <p class="sub-heading">Explore, Imagine, Create</p>
         </div>
         <div class="signIn-button-container">
-            <button class="btn-signIn">Sign Up</ibutton> 
-            <button class="btn-signIn">Sign In</button>
+            <button class="btn-signIn" onclick="showSignUpModal()">Sign Up</ibutton> 
+            <button class="btn-signIn" onclick="showSignInModal()">Sign In</button>
         </div>
     </div>
 
+    <!-- The Sign Up Modal -->
+    <div id="signUp-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-head"> 
+                <h2 class="modal-title">Get Started</h2>
+                <span class="modal-close" id="close-sign-up" onclick="hideSignUpModal()">&times;</span>
+            </div>
+            <hr>
+            <div class="modal-body">
+                <form>
+                    <label for="name" class="label-text">Name</label>
+                    <input type="text" placeholder="Enter your name" id="name" required>
+                    <label for="username" class="label-text">Username</label>
+                    <input type="text" placeholder="Enter your username" id="username" required>
+                    <label for="password" class="label-text">Password</label>
+                    <input type="password" placeholder="Enter your password" id="password" required>
+                    <label for="confirm-password" class="label-text">Confirm Password</label>
+                    <input type="password" placeholder="Re-enter your password" id="confirm-password" required>
+                    <button type="submit" class="signIn-btn-modal" onclick="signup(name,username,password)">Sign Up</button>
+                </form>
+            </div>
+            
+        </div>
+    </div>
 
-    
-        
-    
+    <!--The Sign In Modal-->
+    <div id="signIn-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+
+            <div class="modal-head">
+                <h2 class="modal-title">Welcome Back!</h2>
+                <span onclick="hideSignInModal()" id="close-sign-in" class="modal-close">&times;</span>
+            </div>
+            <hr>
+            <form>
+                <label for="username" class="label-text">Username</label>
+                <input type="text" id="username" placeholder="Enter Username" required>
+                <label for="password" class="label-text">Password</label>
+                <input type="password" id="password" placeholder="Enter Password" required>
+                <button type="submit" onclick="signin(username, password)" class="signIn-btn-modal">Sign In</button>
+            </form>
+            <p class=bottom-banner>Not a member?<span onclick="hideSignInModal();showSignUpModal();" class=signup>Sign Up</span></p>
+        </div>
+    </div>
+
+    <script src="./scripts/common.js"></script>
+
 </body>
 
 </html>
