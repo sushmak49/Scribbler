@@ -26,6 +26,11 @@
         </div>
     </div>
 
+    <div class="post-buttons-container">
+        <button class="btn-post" id="all-posts" onclick="showAllPosts()">All Posts</button>
+        <button class="btn-post" id="create-post" onclick="showCreatePostModal()">Create Post</button>
+    </div>
+
     <!-- The Sign Up Modal -->
     <div id="signUp-modal" class="modal">
         <!-- Modal content -->
@@ -73,7 +78,26 @@
         </div>
     </div>
 
+    <div id="post-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-head">
+                <h2 class="modal-title">Pen Your Post</h2>
+                <span onclick="hideCreatePostModal()" id="close-create-post" class="modal-close">&times;</span>
+            </div>
+            <hr>
+            <form>
+                <label for="title" class="label-text">Title</label>
+                <input type="text" id="title" placeholder="Enter title of your post" required>
+                <label for="contents" class="label-text">Contents</label>
+                <textarea id="contents" placeholder="Enter the contents of your post" required></textarea>
+                <button type="submit" onclick="create(title, contents)" class="signIn-btn-modal">Create</button>
+            </form>
+
+        </div>
+    </div>
+
     <script src="./scripts/common.js"></script>
+    <script src="./scripts/index.js"></script>
 
 </body>
 
