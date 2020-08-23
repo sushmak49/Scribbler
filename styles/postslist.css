@@ -26,6 +26,12 @@ body{
     margin-left: 90px;
     border-radius: 15px;
     margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.post:hover{
+    box-shadow: 10px 10px 5px grey;
 }
 
 .post-content {
@@ -68,20 +74,53 @@ body{
     cursor: pointer;
     margin-bottom: 10px;
     font-weight: bold;
+    color: #808080;
 }
 
 .post-header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    color:#808080;
+    font-size: 18px;
 }
 
 .trash-icon{
-    margin: 10px;
+    margin: 2px;
     cursor: pointer;
     font-size: large;
+    margin-top: 15px;
 }
 
 #last-post{
     margin-left: 410px;
+    width: 40%;
+    height: 40%;
+}
+
+#post-modal{
+    align-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn-yes-no{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#btn-yes{
+    background-color: green;
+    text-align: center;
+    padding: 10px 40px;
+    color: white;
+    border: none;
+}
+
+#btn-no{
+    background-color: red;
+    text-align: center;
+    padding: 10px 40px;
+    color: white;
+    border: none;
 }
