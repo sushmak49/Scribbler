@@ -1,5 +1,5 @@
 function showCreatePostModal() {
-    document.getElementById('post-modal').style.display="block";
+    document.getElementById('post-modal').style.display="flex";
 }
 
 function hideCreatePostModal(){
